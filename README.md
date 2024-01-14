@@ -30,7 +30,9 @@ For the rest service Swagger UI was used: http://localhost:8080/swagger-ui/index
 For using Mongo we need to have mongo installed, and also its client (Compass). Once installed, we can access by using the following:  *mongodb://localhost*
 
 After that, we can create the database with a collection and import the dataset easily. 
+
 For this porject, the default database name is "filma" and collection name is "filmak". 
+
 Then, the structure of the database will look like this:
 
 ![Alt text](images/database.png)
