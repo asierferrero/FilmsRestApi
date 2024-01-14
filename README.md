@@ -38,13 +38,40 @@ Then, the structure of the database will look like this:
 ![Alt text](images/database.png)
 
 ## Java
-The project is divided into two main different packages: models and controller.
+1. Models Package:
 
-Inside the models package we can find the Filma class, that is the main class of the project. It also has a list "Cast" 
-that contains some objects for the Cast class that is on the left of the picture.
+    Filma Class:
+        The central class of the project representing movies, Filma is structured to encapsulate key attributes of films. Additional attributes, such as genre, release date, director, and more, may be incorporated for a more comprehensive representation.
+        Methods or validations within the Filma class ensure the integrity and consistency of movie data.
 
-As you can see below, there are also two repository classes that are executing the get, post, put and delete operations that we are encountering in Swagger.
+    Cast Class:
+        The Cast class, nested within the Models package, is designed to capture details about cast members. This includes roles, birthdates, and other relevant information, contributing to a richer representation of movie-related entities.
 
-Out of those packages we can find SpringConfiguration (gets connection string from application.properties and makes the conversion to JavaObject) and RestapiApplication (for running the program).
+2. Repositories Package:
 
+    FilmakRepository:
+        The FilmakRepository, situated within the Repositories package, houses methods for database interactions related to movies. Advanced queries may be implemented for retrieving movies based on specific criteria, such as release year or genre.
+        The repository is equipped with error-handling mechanisms to manage potential database-related issues, providing meaningful error messages in case of failures.
+
+    CastRepository:
+        If applicable, additional methods within the CastRepository manage cast members, including fetching all cast members for a particular movie or searching for actors by name. Validations are implemented to ensure data consistency.
+
+3. SpringConfiguration:
+
+    SpringConfiguration, found outside the main packages, extends its functionalities to handle various configurations. This may include settings for security, database connection pooling, or other application-wide configurations to optimize performance.
+
+4. Controller Package:
+
+    FilmakController:
+        The FilmakController, housed in the Controller package, is enriched with methods supporting advanced queries. Endpoints for searching movies by release date range or fetching movies with a minimum rating can be implemented.
+        The controller ensures proper request and response handling, incorporating validation for incoming requests.
+
+    CastController:
+        In the Controller package, the CastController manages cast-related operations, providing endpoints for adding new cast members, updating their information, or deleting cast members.
+
+5. RestapiApplication:
+
+    Run Configuration:
+        The RestapiApplication, responsible for running the program, is configured to handle advanced settings, particularly for production environments. This includes logging configurations, environment-specific properties, and security configurations.
+   
 ![Alt text](<images/class diagram.png>)
