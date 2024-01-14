@@ -141,6 +141,7 @@ public class FilmaController {
             filma.setLanguage(language);
             filma.setCast(cast);
             filma.setWriter(writer);
+            filmaRepository.deleteById(_id);
             filmaRepository.save(filma);
             return _id + " id-a duen filma eguneratu egin da. ";
         } catch (Exception e) {
