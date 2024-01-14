@@ -31,7 +31,7 @@ For using Mongo we need to have mongo installed, and also its client (Compass). 
 
 After that, we can create the database with a collection and import the dataset easily. 
 
-For this porject, the default database name is "filma" and collection name is "filmak". 
+**For this porject, the default database name is "filma" and collection name is "filmak". **
 
 Then, the structure of the database will look like this:
 
