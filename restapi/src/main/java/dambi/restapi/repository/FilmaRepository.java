@@ -1,3 +1,9 @@
+/**
+ * This interface provides methods for interacting with the database table "filma".
+ * 
+ * @author Dambi
+ *
+ */
 package dambi.restapi.repository;
 
 import java.util.List;
@@ -6,52 +12,54 @@ import org.springframework.stereotype.Repository;
 
 import dambi.restapi.model.Filma;
 
-/**
- * The FilmaRepository interface defines the methods that the Spring Data JPA repository will use to interact with the Filma entity.
- * The methods are defined as follows:
- * 
- * findAll: Returns a list of all Filma entities in the database.
- * findFilmaById: Returns a Filma entity based on its ID.
- * save: Saves a Filma entity to the database.
- * deleteById: Deletes a Filma entity from the database based on its ID.
- */
-
 @Repository
 public interface FilmaRepository {
 
     /**
-     * Returns a list of all Filma entities in the database.
+     * Returns a list of all films in the database.
      * 
-     * @return a list of Filma entities
+     * @return a list of all films
      */
     List<Filma> findAll();
 
     /**
-     * Returns a Filma entity based on its ID.
+     * Returns a film with the specified ID.
      * 
-     * @param id the ID of the Filma entity
-     * @return the Filma entity with the specified ID, or null if no entity with that ID exists
+     * @param id the ID of the film
+     * @return the film with the specified ID or null if no film with the specified ID exists
      */
     Filma findFilmaById(String id);
 
+    /**
+     * Returns a list of films from the specified country.
+     * 
+     * @param country the country of the films
+     * @return a list of films from the specified country
+     */
     List<Filma> findFilmaByCountry(String country);
 
     /**
-     * Saves a Filma entity to the database.
+     * Saves a film in the database.
      * 
-     * @param filma the Filma entity to save
-     * @return the saved Filma entity
+     * @param filma the film to save
+     * @return the saved film
      */
     Filma save(Filma filma);
 
     /**
-     * Deletes a Filma entity from the database based on its ID.
+     * Deletes a film from the database with the specified ID.
      * 
-     * @param id the ID of the Filma entity to delete
-     * @return the number of entities deleted
+     * @param id the ID of the film to delete
+     * @return the number of films deleted
      */
     long deleteById(String id);
 
+    /**
+     * Deletes a film from the database with the specified title.
+     * 
+     * @param title the title of the film to delete
+     * @return the number of films deleted
+     */
     long deleteByTitle(String title);
 
 }
