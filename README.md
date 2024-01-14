@@ -42,23 +42,22 @@ Then, the structure of the database will look like this:
 
     Filma Class:
         The central class of the project representing movies, Filma is structured to encapsulate key attributes of films. Additional attributes, such as genre, release date, director, and more, may be incorporated for a more comprehensive representation.
-        Methods or validations within the Filma class ensure the integrity and consistency of movie data.
 
     Cast Class:
-        The Cast class, nested within the Models package, is designed to capture details about cast members. This includes roles, birthdates, and other relevant information, contributing to a richer representation of movie-related entities.
+        The Cast class, nested within the Models package, is designed to capture details about cast members. 
 
 2. Repositories Package:
 
     FilmakRepository:
         The FilmakRepository, situated within the Repositories package, houses methods for database interactions related to movies. Advanced queries may be implemented for retrieving movies based on specific criteria, such as release year or genre.
-        The repository is equipped with error-handling mechanisms to manage potential database-related issues, providing meaningful error messages in case of failures.
+        The repository is equipped with error-handling mechanisms to manage potential issues, providing meaningful error messages in case of failures.
 
     CastRepository:
         If applicable, additional methods within the CastRepository manage cast members, including fetching all cast members for a particular movie or searching for actors by name. Validations are implemented to ensure data consistency.
 
 3. SpringConfiguration:
 
-    SpringConfiguration, found outside the main packages, extends its functionalities to handle various configurations. This may include settings for security, database connection pooling, or other application-wide configurations to optimize performance.
+    SpringConfiguration, found outside the main packages, extends its functionalities to handle various configurations. 
 
 4. Controller Package:
 
@@ -72,6 +71,6 @@ Then, the structure of the database will look like this:
 5. RestapiApplication:
 
     Run Configuration:
-        The RestapiApplication, responsible for running the program, is configured to handle advanced settings, particularly for production environments. This includes logging configurations, environment-specific properties, and security configurations.
+        The RestapiApplication is the responsible for running the program.
    
 ![Alt text](<images/class diagram.png>)
