@@ -41,19 +41,19 @@ Then, the structure of the database will look like this:
 1. Models Package:
 
     Filma Class:
-        The central class of the project representing movies, Filma is structured to encapsulate key attributes of films. Additional attributes, such as genre, release date, director, and more, may be incorporated for a more comprehensive representation.
+        The central class of the project representing movies. Additional attributes, such as genre, release date, director, and more, may be incorporated for a more comprehensive representation.
 
     Cast Class:
-        The Cast class, nested within the Models package, is designed to capture details about cast members. 
+        The Cast class, is designed to capture details about cast members. 
 
 2. Repositories Package:
 
     FilmakRepository:
-        The FilmakRepository, situated within the Repositories package, houses methods for database interactions related to movies. Advanced queries may be implemented for retrieving movies based on specific criteria, such as release year or genre.
-        The repository is equipped with error-handling mechanisms to manage potential issues, providing meaningful error messages in case of failures.
+        The FilmakRepository, situated within the Repositories package, houses methods for database interactions related to movies.
+        The repository is equipped with error-handling mechanisms to manage potential issues, providing meaningful error messages in case of errors.
 
     CastRepository:
-        If applicable, additional methods within the CastRepository manage cast members, including fetching all cast members for a particular movie or searching for actors by name. Validations are implemented to ensure data consistency.
+        CastRepository manage cast members, including fetching all cast members for a particular movie or searching for actors by name. Validations are implemented to ensure data consistency.
 
 3. SpringConfiguration:
 
@@ -62,7 +62,7 @@ Then, the structure of the database will look like this:
 4. Controller Package:
 
     FilmakController:
-        The FilmakController, housed in the Controller package, is enriched with methods supporting advanced queries. Endpoints for searching movies by release date range or fetching movies with a minimum rating can be implemented.
+        The FilmakController, includes endpoints for searching movies by release date range or fetching movies with a minimum rating can be implemented.
         The controller ensures proper request and response handling, incorporating validation for incoming requests.
 
     CastController:
