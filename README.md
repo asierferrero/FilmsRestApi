@@ -1,4 +1,4 @@
-# FilmakRestApi
+# FilmsRestApi
 The aim of this project is to use a Rest API to access data from a Mongo database using Spring Java technology. For that purpose, a dataset was selected to be loaded into the Mongo database, that includes almost 10K movies from Netflix digital platform. 
 
 ## Dataset
